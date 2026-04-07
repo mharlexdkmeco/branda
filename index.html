@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Intercom Messenger Demo</title>
+  <title>BRAND A MULTIBRANDING</title>
   <style>
     :root {
       --bg: #000;
@@ -18,7 +18,7 @@
       background: var(--bg);
       color: var(--fg);
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      overflow: hidden; /* Prevent reflow when Intercom appears */
+      overflow: hidden;
     }
 
     .wrapper {
@@ -59,7 +59,6 @@
     .btn:active { transform: translateY(1px); }
     .btn:focus { outline: 3px solid rgba(255,255,255,0.12); outline-offset: 3px; }
 
-    /* Link styling */
     a.livechat-link {
       color: #00aaff;
       text-decoration: underline;
@@ -72,45 +71,41 @@
       text-decoration: none;
     }
 
-    /* Prevent intercom bubble from affecting layout */
     #intercom-container, .intercom-lightweight-app, .intercom-launcher-frame {
       position: fixed !important;
     }
 
-      /* Hide the unread number */
-  .intercom-launcher-badge-count {
-    display: none !important;
-  }
+    .intercom-launcher-badge-count {
+      display: none !important;
+    }
 
-  /* Keep the red dot visible */
-  .intercom-launcher-badge {
-    width: 10px !important;
-    height: 10px !important;
-    min-width: 10px !important;
-    border-radius: 50% !important;
-  }
+    .intercom-launcher-badge {
+      width: 10px !important;
+      height: 10px !important;
+      min-width: 10px !important;
+      border-radius: 50% !important;
+    }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <h1>Intercom <a href="#" class="livechat-link" onclick="openIntercomChat(); return false;">Messenger</a> Website</h1>
-    <p>We're here to help you with your questions and support needs. Start </p>
+    <h1>
+      <a href="#" class="livechat-link" onclick="openIntercomChat(); return false;">
+        BRAND A MULTIBRANDING
+      </a>
+    </h1>
+    <p>Welcome to Brand A support. Click below to open the messenger.</p>
     <button class="btn" aria-label="Chat Now" onclick="openIntercomChat()">Chat Now</button>
     <br>
-    
   </div>
 
   <script>
-  // Intercom Settings
   window.intercomSettings = {
     api_base: "https://api-iam.intercom.io",
     app_id: "ohkvdq68",
-
-    // 🔕 Hide popup message notifications, keep red dot
     hide_notifications: true
   };
 
-  // Load Intercom Widget
   (function () {
     var w = window;
     var ic = w.Intercom;
@@ -143,7 +138,6 @@
     }
   })();
 
-  // Function to open Intercom chat manually
   function openIntercomChat() {
     if (window.Intercom) {
       window.Intercom('show');
@@ -152,18 +146,11 @@
     }
   }
 
-  // Optional safety: ensure no auto-open happens
   window.addEventListener('load', function () {
     if (window.Intercom) {
       window.Intercom('hide');
     }
   });
-
-  // Auto-open chat after 1 second (disabled)
-  // setTimeout(function () {
-  //   openIntercomChat();
-  // }, 1000);
 </script>
-
-  </body>
+</body>
 </html>
